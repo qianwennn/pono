@@ -88,7 +88,9 @@ enum optionIndex
   KIND_NO_MULTI_CALL_SIMPLE_PATH_CHECK,
   KIND_NO_IND_CHECK_INIT_STATES,
   KIND_NO_IND_CHECK,
-  KIND_NO_IND_CHECK_PROPERTY
+  KIND_NO_IND_CHECK_PROPERTY,
+  KIND_ONE_TIME_BASE_CHECK,
+  KIND_BOUND_STEP
 };
 
 struct Arg : public option::Arg
@@ -174,7 +176,7 @@ const option::Descriptor usage[] = {
     "",
     "smt-solver",
     Arg::NonEmpty,
-    "  --smt-solver \tSMT Solver to use: btor, msat, or cvc4." },
+    "  --smt-solver \tSMT Solver to use: btor, msat, or cvc5." },
   { LOGGING_SMT_SOLVER,
     0,
     "",
@@ -568,6 +570,22 @@ const option::Descriptor usage[] = {
     "  --kind-no-ind-check-property \tK-induction: skip checking inductive case based "
     "on property (WARNING: will cause incompleteness on most problem instances)"
     },
+  { KIND_ONE_TIME_BASE_CHECK,
+    0,
+    "",
+    "kind-one-time-base-check",
+    Arg::None,
+    "  --kind-one-time-base-check \tK-induction: check base case only once after"
+    " inductive check was unsatisfiable (WARNING: counterexamples might be missed)"
+    },
+  { KIND_BOUND_STEP,
+    0,
+    "",
+    "kind-bound-step",
+    Arg::Numeric,
+    "  --kind-bound-step \tAmount by which bound (unrolling depth) "
+    "is increased in k-induction (default: 1)"
+    },
   { 0, 0, 0, 0, 0, 0 }
 };
 /*********************************** end Option Handling setup
@@ -659,8 +677,8 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
         case SMT_SOLVER: {
           if (opt.arg == std::string("btor")) {
             smt_solver_ = smt::BTOR;
-          } else if (opt.arg == std::string("cvc4")) {
-            smt_solver_ = smt::CVC4;
+          } else if (opt.arg == std::string("cvc5")) {
+            smt_solver_ = smt::CVC5;
           } else if (opt.arg == std::string("msat")) {
             smt_solver_ = smt::MSAT;
           } else {
@@ -757,6 +775,11 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
         case KIND_NO_IND_CHECK: kind_no_ind_check_ = true;
 	  kind_no_ind_check_init_states_ = true; kind_no_ind_check_property_ = true; break;
         case KIND_NO_IND_CHECK_PROPERTY: kind_no_ind_check_property_ = true; break;
+        case KIND_ONE_TIME_BASE_CHECK: kind_one_time_base_check_ = true; break;
+        case KIND_BOUND_STEP: kind_bound_step_ = atoi(opt.arg);
+	  if (kind_bound_step_ == 0)
+	    throw PonoException("--kind-bound-step must be greater than 0");
+	  break;
         case UNKNOWN_OPTION:
           // not possible because Arg::Unknown returns ARG_ILLEGAL
           // which aborts the parse with an error
@@ -772,13 +795,6 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
     if (ceg_prophecy_arrays_ && smt_solver_ != smt::MSAT) {
       throw PonoException(
           "Counterexample-guided prophecy only supported with MathSAT so far");
-    }
-
-    if (smt_solver_ == smt::CVC4
-        && ic3_variants().find(engine_) != ic3_variants().end()) {
-      throw PonoException(
-          "CVC4 cannot handle multiple solver instances, and thus does not "
-          "currently support IC3 variants.");
     }
   }
   catch (PonoException & ce) {
