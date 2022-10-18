@@ -604,8 +604,13 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
                                                 char ** argv,
                                                 bool expect_file)
 {
+
   argc -= (argc > 0);
   argv += (argc > 0);  // skip program name argv[0] if present
+  // argc = 3;
+  // argv[1] = "-e";
+  // argv[2] = "ic3sa";
+  // argv[3] = "test.btor";
   option::Stats stats(usage, argc, argv);
   std::vector<option::Option> options(stats.options_max);
   std::vector<option::Option> buffer(stats.buffer_max);
