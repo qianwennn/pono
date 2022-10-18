@@ -739,6 +739,16 @@ void BTOR2Encoder::parse(const std::string filename)
       }
     }
 
+    // TODO: add uninterpreted function replacement HERE
+    if (l_->symbol) {
+      std::string comment(l_->symbol);
+      if ( comment.find('###UF##') == 0 ) {
+        terms_.at(l_->id);
+      }
+    }
+
+
+
     // use the symbol to name the term (if applicable)
     // input, output, and state already named
     if (l_->symbol && l_->tag != BTOR2_TAG_input && l_->tag != BTOR2_TAG_output
