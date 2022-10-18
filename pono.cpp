@@ -210,8 +210,8 @@ void profiling_sig_handler(int sig)
 
 int main(int argc, char ** argv)
 {
+  cout<<"Hello pono stop here"<<endl;
   auto begin_time_stamp = timestamp();
-
   PonoOptions pono_options;
   ProverResult res = pono_options.parse_and_set_options(argc, argv);
   if (res == ERROR) return res;
