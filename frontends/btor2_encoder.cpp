@@ -18,6 +18,7 @@
 
 #include "btor2_encoder.h"
 #include "utils/logger.h"
+#include "modifiers/ops_mod_abstractor.h"
 
 #include <iostream>
 #include "assert.h"
@@ -743,7 +744,7 @@ void BTOR2Encoder::parse(const std::string filename)
     if (l_->symbol) {
       std::string comment(l_->symbol);
       if ( comment.find('###UF##') == 0 ) {
-        terms_.at(l_->id);
+        terms_.at(l_->id) = abstract_op( terms_.at(l_->id) );
       }
     }
 

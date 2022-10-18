@@ -21,6 +21,17 @@ using namespace std;
 
 namespace pono {
 
+
+
+smt::Term abstract_op(const smt::Term & in) {
+  // 1. create function name
+  // 2. extract the sort (type) of children
+  // 3. make_sort
+  // 4. make_symbol
+  // 5. make_term(Apply,...)
+  // return the result of 5
+}
+
 OpsAbstractor::OpsAbstractor(const TransitionSystem & conc_ts,
                              TransitionSystem & abs_ts)
     : super(conc_ts, abs_ts),
