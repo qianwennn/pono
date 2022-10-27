@@ -1,0 +1,13 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build", //这个task的label，在launch.json里面用
+            "type": "shell",
+            "command": "cd build && make -j64",
+            "args": [] //编译的时候运行的参数
+        }
+    ]
+}
