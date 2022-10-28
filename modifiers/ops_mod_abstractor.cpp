@@ -21,15 +21,59 @@ using namespace std;
 
 namespace pono {
 
-
-
-smt::Term abstract_op(const smt::Term & in) {
+smt::Term abstract_op(const smt::Term & in)
+{
   // 1. create function name
   // 2. extract the sort (type) of children
   // 3. make_sort
   // 4. make_symbol
   // 5. make_term(Apply,...)
   // return the result of 5
+  assert(cached_children.size()
+         <= 2);  // collect children ,opetator num ite,three operators,
+  string op_str = "abs_" + op.to_string() + "_" + to_string(sort->get_width())
+                  + "_"
+                  + to_string(cached_children[0]->get_sort()->get_width());
+
+  SortVec sv({ cached_children[0]->get_sort() });
+  if (cached_children.size() == 2) {
+    op_str += "_" + to_string(cached_children[1]->get_sort()->get_width());
+    sv.push_back(cached_children[1]->get_sort());
+  }
+  sv.push_back(sort);
+  // do abstraction part ,bilud name
+  Term abs_op;  //
+  auto it = oa_.abs_op_symbols_.find(op_str);
+  if (it == oa_.abs_op_symbols_.end()) {
+    Sort func_sort =
+        solver_->make_sort(FUNCTION, sv);  // make_sort and make_symbol directly
+    abs_op = solver_->make_symbol(op_str, func_sort);
+    oa_.abs_op_symbols_[op_str] = abs_op;
+    oa_.abs_symbols_to_op_[abs_op] = op;
+  } else {
+    abs_op = it->second;
+  }
+
+  TermVec args = { abs_op };
+  args.insert(args.end(), cached_children.begin(), cached_children.end());
+  res = solver_->make_term(Apply, args);
+
+  assert(oa_.abs_terms_.find(res) == oa_.abs_terms_.end());
+  oa_.abs_terms_[res] = solver_->make_term(op, cached_children);  // make_term
+  break;
+}
+  // other operators
+default:
+  // should not reach
+  assert(false);
+  break;
+};
+}
+/*
+  assert(res);
+  oa_.update_term_cache(term, res);
+*/
+return res;
 }
 
 OpsAbstractor::OpsAbstractor(const TransitionSystem & conc_ts,
@@ -42,10 +86,7 @@ OpsAbstractor::OpsAbstractor(const TransitionSystem & conc_ts,
 {
 }
 
-Term OpsAbstractor::abstract(Term & t)
-{
-  return abs_walker_.visit(t);
-}
+Term OpsAbstractor::abstract(Term & t) { return abs_walker_.visit(t); }
 
 Term OpsAbstractor::concrete(Term & t) { return conc_walker_.visit(t); }
 
@@ -72,7 +113,7 @@ void OpsAbstractor::do_abstraction()
   if (!abs_ts_.is_functional()) {
     abs_ts_ = conc_ts_;
     RelationalTransitionSystem & abs_rts =
-      static_cast<RelationalTransitionSystem &>(abs_ts_);
+        static_cast<RelationalTransitionSystem &>(abs_ts_);
 
     Term init = conc_ts_.init();
     Term trans = conc_ts_.trans();
@@ -83,13 +124,13 @@ void OpsAbstractor::do_abstraction()
     abs_rts.set_trans(abs_trans);
   } else {
     FunctionalTransitionSystem & abs_fts =
-      static_cast<FunctionalTransitionSystem &>(abs_ts_);
+        static_cast<FunctionalTransitionSystem &>(abs_ts_);
 
     // add inputs and statevars
     for (const auto & v : conc_ts_.inputvars()) {
       abs_fts.add_inputvar(v);
     }
-    for (const auto &v : conc_ts_.statevars()) {
+    for (const auto & v : conc_ts_.statevars()) {
       abs_fts.add_statevar(v, conc_ts_.next(v));
     }
 
@@ -105,7 +146,7 @@ void OpsAbstractor::do_abstraction()
     for (const auto & e : conc_ts_.named_terms()) {
       abs_fts.name_term(e.first, e.second);
     }
-    for (const auto &c : conc_ts_.constraints()) {
+    for (const auto & c : conc_ts_.constraints()) {
       Term cc = c.first;
       abs_fts.add_constraint(abstract(cc), c.second);
     }
@@ -138,9 +179,9 @@ WalkerStepResult OpsAbstractor::AbstractionWalker::visit_term(Term & term)
 
   Term res;
   // check if we do not need to abstract the operator
-  if (op.is_null() ||
-      oa_.ops_to_abstract_.find(op) == oa_.ops_to_abstract_.end() ||
-      (sk == BV && sort->get_width() <= oa_.min_bw_)) {
+  if (op.is_null()
+      || oa_.ops_to_abstract_.find(op) == oa_.ops_to_abstract_.end()
+      || (sk == BV && sort->get_width() <= oa_.min_bw_)) {
     res = op.is_null() ? term : solver_->make_term(op, cached_children);
   } else {
     switch (op.prim_op) {
@@ -207,7 +248,8 @@ WalkerStepResult OpsAbstractor::AbstractionWalker::visit_term(Term & term)
       case BVLshr:
       case BVNot:
       case BVNeg: {
-        assert(cached_children.size() <= 2);
+        assert(cached_children.size()
+               <= 2);  // collect children ,opetator num ite,three operators,
         string op_str =
             "abs_" + op.to_string() + "_" + to_string(sort->get_width()) + "_"
             + to_string(cached_children[0]->get_sort()->get_width());
@@ -219,11 +261,12 @@ WalkerStepResult OpsAbstractor::AbstractionWalker::visit_term(Term & term)
           sv.push_back(cached_children[1]->get_sort());
         }
         sv.push_back(sort);
-
-        Term abs_op;
+        // do abstraction part ,bilud name
+        Term abs_op;  //
         auto it = oa_.abs_op_symbols_.find(op_str);
         if (it == oa_.abs_op_symbols_.end()) {
-          Sort func_sort = solver_->make_sort(FUNCTION, sv);
+          Sort func_sort = solver_->make_sort(
+              FUNCTION, sv);  // make_sort and make_symbol directly
           abs_op = solver_->make_symbol(op_str, func_sort);
           oa_.abs_op_symbols_[op_str] = abs_op;
           oa_.abs_symbols_to_op_[abs_op] = op;
@@ -236,7 +279,8 @@ WalkerStepResult OpsAbstractor::AbstractionWalker::visit_term(Term & term)
         res = solver_->make_term(Apply, args);
 
         assert(oa_.abs_terms_.find(res) == oa_.abs_terms_.end());
-        oa_.abs_terms_[res] = solver_->make_term(op, cached_children);
+        oa_.abs_terms_[res] =
+            solver_->make_term(op, cached_children);  // make_term
         break;
       }
         // other operators
@@ -253,10 +297,10 @@ WalkerStepResult OpsAbstractor::AbstractionWalker::visit_term(Term & term)
   return Walker_Continue;
 }
 
-OpsAbstractor::ConcretizationWalker::ConcretizationWalker(OpsAbstractor &oa,
-                                                       UnorderedTermMap *ext_cache)
-  : IdentityWalker(oa.solver_, false, ext_cache),
-    oa_(oa)
+OpsAbstractor::ConcretizationWalker::ConcretizationWalker(
+
+    OpsAbstractor & oa, UnorderedTermMap * ext_cache)
+    : IdentityWalker(oa.solver_, false, ext_cache), oa_(oa)
 {
 }
 
@@ -318,4 +362,4 @@ WalkerStepResult OpsAbstractor::ConcretizationWalker::visit_term(Term & term)
   return Walker_Continue;
 }
 
-} // namespace pono
+}  // namespace pono
