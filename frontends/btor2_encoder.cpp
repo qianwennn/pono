@@ -741,10 +741,11 @@ void BTOR2Encoder::parse(const std::string filename)
     }
 
     // TODO: add uninterpreted function replacement HERE
+    // l_symbol(zhushi)
     if (l_->symbol) {
       std::string comment(l_->symbol);
-      if ( comment.find('###UF##') == 0 ) {
-        terms_.at(l_->id) = abstract_op( terms_.at(l_->id) );
+      if ( comment.find("###UF##") == 0 ) {
+        terms_.at(l_->id) = abstract_op( terms_.at(l_->id) );//smt expression ,replacement part in ops_mod_abstractor
       }
     }
 
