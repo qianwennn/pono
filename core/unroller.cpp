@@ -45,6 +45,14 @@ Term Unroller::at_time(const Term & t, unsigned int k)
     return it->second;
   }
 
+  std::cout << "-----------DEBUG---------" << std::endl;
+  std::cout << t->to_string() << std::endl;
+
+  for (auto && term_pair : cache){
+    std::cout << term_pair.first->to_string() << std::endl;
+    std::cout << term_pair.second->to_string() << std::endl;
+  }
+  std::cout << "-----------END DEBUG---------" << std::endl;
   return solver_->substitute(t, cache);
 }
 

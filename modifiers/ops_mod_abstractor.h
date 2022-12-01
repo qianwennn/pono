@@ -22,7 +22,7 @@
 
 namespace pono {
 
-smt::Term abstract_op(const smt::Term & in);
+smt::Term abstract_op(const smt::Term & in, const smt::SmtSolver & solver_);
 
 
 } // namespace pono

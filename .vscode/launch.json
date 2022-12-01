@@ -9,13 +9,12 @@
         "type": "cppdbg", 
         "request": "launch", 
         "program": "${workspaceFolder}/build/pono",
-        "args": [],
+        "args": ["--smt-solver","cvc5","test.btor"],
         "stopAtEntry": false,
-        "cwd": "${fileDirname}",
+        "cwd": "${workspaceFolder}/test_2",//datapath
         "environment": [], 
         "externalConsole": false,
-        "MIMode": "gdb",
-        "preLaunchTask": "build", 
+        "MIMode": "gdb", 
         "setupCommands": [
             {
                 "description": "Enable pretty-printing for gdb",

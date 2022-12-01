@@ -21,7 +21,8 @@ using namespace std;
 
 namespace pono {
 
-smt::Term abstract_op(const smt::Term & in)
+smt::Term abstract_op(const smt::Term & in ,const smt::SmtSolver & solver_)// the file def 
+//abs_op add slover_ here
 {
   // 1. create function name
   // 2. extract the sort (type) of children
@@ -29,14 +30,14 @@ smt::Term abstract_op(const smt::Term & in)
   // 4. make_symbol
   // 5. make_term(Apply,...)
   // return the result of 5
-  // collect children ,opetator num ite,three operators,
+  // collect children ,opetatonum ite,three operators,
   string op_str = "un_func";
-  SortVec sv();
-for ( auto it = in.begin(); it != in.end(); ++it){
-  auto sort = *it->sort();
+  SortVec sv;
+  for ( auto it = in->begin(); it != in->end(); ++it){
+  auto sort = (*it)->get_sort();
   sv.push_back(sort);
 }
-  sv.push_back(in -> sort());
+  sv.push_back(in -> get_sort());
   // do abstraction part ,bilud name
   Term abs_op;  //
       Sort func_sort =
@@ -45,8 +46,8 @@ for ( auto it = in.begin(); it != in.end(); ++it){
 
 
   TermVec args = { abs_op };
-  args.insert(args.end(), in.begin(), in.end());
-  res = solver_->make_term(Apply, args);
+  args.insert(args.end(), in ->begin(), in->end());
+  auto res = solver_->make_term(Apply, args);
  // make_term
 
 return res;
