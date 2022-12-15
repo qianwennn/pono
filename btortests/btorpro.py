@@ -17,12 +17,7 @@ def process(line):
             print('after process:',line)
             linechange.append(line)
     return line
-
-                              
-
-
-
-
+                            
 def getfile():
     with open(s + '/'+ s +'.btor2',encoding='utf-8')as f:
         with open(s + '/'+ s + '_x.btor2','w',encoding='utf-8')as g:
@@ -33,8 +28,6 @@ def getfile():
                 line = process(line)
                 if not line:break
                 g.write(line)
-
-
 
 def getfiles():
     print(linenum,linechange)
