@@ -1,7 +1,7 @@
 list_bitop = ['and','nand','nor','or','xnor','xor']
 list_arith = ['add','mul','div','smod','rem','sub']
 list_overflow = ['addo','divo','mulo','subo']
-list_all = list_bitop + list_arith + list_overflow + ['is']
+list_all = list_bitop + list_arith + list_overflow
 k=0
 t= -1
 linenum = []
