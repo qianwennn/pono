@@ -149,6 +149,9 @@ ProverResult check_prop(PonoOptions pono_options,
     r = prover->check_until(pono_options.bound_);
   }
 
+  auto is_covered = UninterpretedFuncCOICover(ts, p, pono_options.bound_);
+  std::cout << "is_covered: " << is_covered << std::endl;
+
   if (r == FALSE && pono_options.witness_) {
     bool success = prover->witness(cex);
     if (!success) {
