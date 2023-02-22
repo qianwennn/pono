@@ -1,20 +1,51 @@
+from multiprocessing.pool import Pool
+from multiprocessing import Process
+import time
 import subprocess
 import os, sys
+import logging
+
+def getPid(gameproc):
+    cmd = "ps aux| grep '%s'|grep -v grep " % gameproc
+    logging.info(cmd)
+    out = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
+    infos = out.stdout.read().splitlines()
+    #print(infos)
+    if len(infos) >= 1:
+        for i in infos:
+            pid = i.split()[1]
+        return pid
+    else:
+        return -1
+
+def reducepid(line):
+    str_list = list(line)
+    del str_list[0 : 2]
+    str_list.pop()
+    newline = ''.join(str_list)
+    return newline
+
+def delpid(cmd):
+    pid = getPid(cmd)
+    pid = str(pid)
+    pid = reducepid(pid)
+    delcmd = 'kill -9 '+ pid
+    subprocess.run(args=delcmd,shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,universal_newlines=True,timeout=5,check=False)
 
 def subprocess_run(str_shell):
     try:
         CompletedProcessObject=subprocess.run(args=str_shell,shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE,universal_newlines=True,timeout=60,check=False)
+                            stderr=subprocess.PIPE,universal_newlines=True,timeout=3600,check=False)
         if CompletedProcessObject:
             code,out,err=CompletedProcessObject.returncode,CompletedProcessObject.stdout,CompletedProcessObject.stderr
             #print(code)
             return out
-    except:
+
+    except subprocess.TimeoutExpired:
         print('this file timeout')
-        return 0 
-
-        
-
+        delpid(str_shell)
+        return 0
 
 def filesname(name,path):
     str_list = list(name)
@@ -35,13 +66,14 @@ def reduce(line):
     newline = ''.join(str_list)
     return newline
 
-def runfile(k):
-    str_shell='../build/pono -k ' + str(k) + ' --smt-solver  cvc5  ./crafted/cav14_example/cav14_example.btor2'
+
+def runfile(t):
+    str_shell='../build/pono -k ' + str(t) + ' --smt-solver cvc5 ./crafted/cav14_example/cav14_example.btor2'
     #subprocess_run(str_shell)
     btornames = []
     filenames = ['paper_v3','sw_loop','cav14_example','sw_state_machine','sw_ball2004_1','counter','sw_sym_ex','client_server','eq_sdp_v4','eq_sdp_v6']
-    result = './result_' + str(k) + '.txt'
-    finres = './finres_' + str(k) + '.txt'
+    result = './result__' + str(t) + '.txt'
+    finres = './finres__' + str(t) + '.txt'
     with open(result,'w',encoding='utf-8')as g:
         with open(finres,'w',encoding='utf-8')as k:
             for root, dirs, files in os.walk(".", topdown=False):#get btor files
@@ -71,6 +103,7 @@ def runfile(k):
                                         k.write(line)
                                         line = 'the timeout is:'+ str(timeout)+'\n'
                                         k.write(line)
+                                        print(line+'\n'+ 'the fileamount is:'+ str(fileamount-1)+'\n'+'the timeout is:'+ str(timeout)+'\n'+'the unknown is:'+ str(unknown-1)+'\n')
                                         filename = i
                                         fileamount = 1
                                         cover = 0
@@ -83,7 +116,8 @@ def runfile(k):
                                     unknown = 0
                                     timeout = 0                              
                                 str_shell = filesname(str_shell,path) #run btor files
-                                line = subprocess_run(str_shell)
+                                #line = subprocess_run(str_shell)
+                                line = p.apply_async(subprocess_run, args = (str_shell,)).get()
                                 if (line == 0):
                                     line = str(0)
                                     timeout += 1
@@ -104,17 +138,25 @@ def runfile(k):
             line = 'the unknown is:'+ str(unknown-1)+'\n'
             k.write(line)
             line = 'the timeout is:'+ str(timeout)+'\n'
-            k.write(line)                
+            k.write(line)
+            print(line+'\n'+ 'the fileamount is:'+ str(fileamount-1)+'\n'+'the timeout is:'+ str(timeout)+'\n'+'the unknown is:'+ str(unknown-1)+'\n')                
             g.write(line + '\n')#add the resut into file
+        k.close()
+    g.close()
                         
     
-def main():
-    #k_list = [100]
-    #for i in k_list:
-    runfile(100)
+#def main():
+
 
 
 #runcmd(["cd crafted","ls"])#序列参数
 if __name__=='__main__':
-    main()
+    p = Pool(2)
+    k_list = [50]
+    for i in k_list:
+        runfile(i)
+    p.close()
+    p.join()
+    print('主进程执行完毕')
+    
 
