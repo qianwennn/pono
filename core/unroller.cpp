@@ -44,21 +44,16 @@ Term Unroller::at_time(const Term & t, unsigned int k)
   if (it != cache.end()) {
     return it->second;
   }
-
-  std::cout << "-----------DEBUG---------" << std::endl;
-  std::cout << t->to_string() << std::endl;
-
-  for (auto && term_pair : cache){
-    std::cout << term_pair.first->to_string() << std::endl;
-    std::cout << term_pair.second->to_string() << std::endl;
-  }
-  std::cout << "-----------END DEBUG---------" << std::endl;
-  return solver_->substitute(t, cache);
+  // HZ: this modification here forces to use the base subtitution function
+  // because in Boolector, the overloaded function sometimes might fail
+  return solver_->AbsSmtSolver::substitute(t, cache);
 }
 
 Term Unroller::untime(const Term & t) const
 {
-  return solver_->substitute(t, untime_cache_);
+  // HZ: this modification here forces to use the base subtitution function
+  // because in Boolector, the overloaded function sometimes might fail
+  return solver_->AbsSmtSolver::substitute(t, untime_cache_);
 }
 
 size_t Unroller::get_var_time(const Term & v) const
