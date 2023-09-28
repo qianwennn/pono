@@ -73,8 +73,8 @@ def getfile():
 
 def getfiles(bound):
     t = -1
-    print('this is linenum and linechange')
-    print(linenum,linechange)
+    #print('this is linenum and linechange')
+    #print(linenum,linechange)
     newname = filesname(name)
     with open(root + '/' + newname +'_res.txt' , 'w' ,encoding = 'utf-8') as r:
         for i in linenum:

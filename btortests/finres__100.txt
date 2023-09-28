@@ -1,5 +1,0 @@
-counter
-the fileamount is:2
-the covered is:2
-the unknown is:0
-the timeout is:0
