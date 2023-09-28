@@ -1,0 +1,9 @@
+5  unknown
+15  sat
+16  sat
+24  sat
+26  sat
+38  unknown
+39  unknown
+41  sat
+42  sat

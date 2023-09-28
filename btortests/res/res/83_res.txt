@@ -1,0 +1,13 @@
+4  unknown
+6  unknown
+7  unknown
+10  unknown
+13  unknown
+17  unknown
+24  sat
+32  unknown
+37  unknown
+40  sat
+43  sat
+47  unknown
+48  sat

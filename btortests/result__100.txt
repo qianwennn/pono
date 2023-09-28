@@ -1,0 +1,57 @@
+counter_1.btor2
+
+is_covered: 1
+sat
+counter_0.btor2
+
+is_covered: 1
+sat
+counter.btor2
+
+is_covered: 0
+unknown
+sw_state_machine_52.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_30.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_6.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_54.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_23.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_32.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_73.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_31.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_97.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_25.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_58.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_63.btor2

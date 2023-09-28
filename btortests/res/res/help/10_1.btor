@@ -1,0 +1,53 @@
+1 sort bitvec 1
+2 sort bitvec 3
+3 ones 2
+4 mul 2 3 3
+5 one 1
+6 const 2 101
+7 one 2
+8 ite 2 5 6 7
+9 ulte 1 4 8
+10 sort bitvec 4
+11 zero 10
+12 state 1 bv0_1
+13 sra 1 12 5
+14 ones 10
+15 or 10 11 11 ###UF###
+16 ite 10 13 14 15
+17 sub 10 11 16
+18 xnor 2 7 3
+19 sext 10 18 1
+20 srem 10 19 11
+21 sdiv 10 17 20
+22 sra 10 21 11
+23 init 1 12 9
+24 sort bitvec 8
+25 sort bitvec 6
+26 one 25
+27 uext 24 26 2
+28 const 24 11010011
+29 urem 24 28 28
+30 ulte 1 27 29
+31 sort bitvec 2
+32 input 2 input0_3
+33 concat 10 32 12
+34 state 10 bv1_4
+35 sgte 1 33 34
+36 sext 31 35 1
+37 slice 1 36 0 0
+38 or 1 30 37
+39 next 1 12 38
+40 init 10 34 22
+41 const 10 0101
+42 sll 10 41 34
+43 next 10 34 42
+44 sext 2 12 2
+45 sra 2 7 32
+46 and 2 44 45
+47 ite 2 12 32 32
+48 udiv 2 7 3
+49 and 2 47 48
+50 ite 2 35 46 49
+51 uext 2 12 2
+52 sgte 1 50 51
+53 bad 52

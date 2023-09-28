@@ -1,0 +1,4 @@
+4  sat
+8  sat
+13  sat
+25  sat

@@ -1,0 +1,42 @@
+1 sort bitvec 1
+2 sort bitvec 5
+3 one 2
+4 zero 2
+5 sdiv 2 3 4
+6 and 2 5 3
+7 not 2 6
+8 slice 1 7 1 1
+9 neg 1 8
+10 sort bitvec 2
+11 const 10 01
+12 ones 10
+13 or 10 11 12
+14 and 10 11 13
+15 one 1
+16 state 1
+17 urem 1 15 16
+18 sext 10 17 1
+19 xor 10 14 18 ###UF###
+20 state 10 bv0_2
+21 init 10 20 19
+22 const 10 00
+23 srem 10 22 22
+24 sort bitvec 8
+25 one 24
+26 slice 2 25 6 2
+27 uext 2 22 3
+28 sdiv 2 26 27
+29 slice 10 28 1 0
+30 sgte 1 23 29
+31 concat 10 16 30
+32 next 10 20 31
+33 init 1 16 9
+34 sgt 1 20 20
+35 add 1 16 34
+36 next 1 16 35
+37 sort bitvec 6
+38 input 37 input0_6
+39 uext 37 20 4
+40 add 37 39 38
+41 ulte 1 38 40
+42 bad 41

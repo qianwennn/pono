@@ -1,0 +1,11 @@
+11  unknown
+12  unknown
+14  unknown
+23  unknown
+28  unknown
+31  unknown
+33  unknown
+34  unknown
+35  sat
+43  unknown
+55  sat

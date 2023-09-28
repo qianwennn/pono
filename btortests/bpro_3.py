@@ -47,12 +47,12 @@ def subprocess_run(str_shell):
         delpid(str_shell)
         return 0
 
-def filesname(name,path):
+def cmdname(name,path):
     str_list = list(name)
-    i = name.find('cvc5')
-    del str_list[i+5: -1]
+    i = name.find('-k')
+    del str_list[i+6: -1]
     str_list.pop()
-    str_list.insert(i+6,path)
+    str_list.insert(i+7,path)
     newname = ''.join(str_list)
     return newname
 
@@ -68,12 +68,12 @@ def reduce(line):
 
 
 def runfile(t):
-    str_shell='../build/pono -k ' + str(t) + ' --smt-solver cvc5 ./crafted/cav14_example/cav14_example.btor2'
+    str_shell='../build/pono --logging-smt-solver -k ' + str(t) + ' ./crafted/cav14_example/cav14_example.btor2'
     #subprocess_run(str_shell)
     btornames = []
     filenames = ['paper_v3','sw_loop','cav14_example','sw_state_machine','sw_ball2004_1','counter','sw_sym_ex','client_server','eq_sdp_v4','eq_sdp_v6']
-    result = './result__' + str(t) + '.txt'
-    finres = './finres__' + str(t) + '.txt'
+    result = './result_' + str(t) + '.txt'
+    finres = './finres_' + str(t) + '.txt'
     with open(result,'w',encoding='utf-8')as g:
         with open(finres,'w',encoding='utf-8')as k:
             for root, dirs, files in os.walk(".", topdown=False):#get btor files
@@ -115,7 +115,8 @@ def runfile(t):
                                     cover = 0
                                     unknown = 0
                                     timeout = 0                              
-                                str_shell = filesname(str_shell,path) #run btor files
+                                str_shell = cmdname(str_shell,path) #run btor files
+                                print(str_shell)
                                 #line = subprocess_run(str_shell)
                                 line = p.apply_async(subprocess_run, args = (str_shell,)).get()
                                 if (line == 0):
@@ -151,8 +152,8 @@ def runfile(t):
 
 #runcmd(["cd crafted","ls"])#序列参数
 if __name__=='__main__':
-    p = Pool(2)
-    k_list = [50]
+    p = Pool(8)
+    k_list = [10]
     for i in k_list:
         runfile(i)
     p.close()

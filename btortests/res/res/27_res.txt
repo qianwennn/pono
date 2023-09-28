@@ -1,0 +1,10 @@
+5  sat
+6  sat
+13  sat
+14  sat
+17  sat
+19  sat
+23  sat
+28  sat
+35  sat
+40  sat

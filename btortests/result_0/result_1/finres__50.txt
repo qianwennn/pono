@@ -1,0 +1,40 @@
+eq_sdp_v6
+the fileamount is:10
+the covered is:10
+the unknown is:0
+the timeout is:0
+sw_loop
+the fileamount is:60
+the covered is:50
+the unknown is:44
+the timeout is:10
+paper_v3
+the fileamount is:5
+the covered is:5
+the unknown is:1
+the timeout is:0
+cav14_example
+the fileamount is:5
+the covered is:5
+the unknown is:1
+the timeout is:0
+sw_sym_ex
+the fileamount is:74
+the covered is:69
+the unknown is:65
+the timeout is:5
+sw_ball2004_1
+the fileamount is:35
+the covered is:34
+the unknown is:30
+the timeout is:1
+eq_sdp_v4
+the fileamount is:10
+the covered is:10
+the unknown is:0
+the timeout is:0
+client_server
+the fileamount is:28
+the covered is:28
+the unknown is:-1
+the timeout is:1

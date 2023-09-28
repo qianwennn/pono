@@ -1,3 +1,9 @@
+#
+#get the line num -> run the file -> write the result in filename_result.txt
+#how to run files in turn ? ->1. new code run   2. old code 
+#new code : read file run it write result
+#
+
 import os,sys
 import subprocess
 
@@ -12,13 +18,13 @@ def process(line):
     for i in list_line:
         if i in list_all:
             list_line.append('###UF###\n')
-            linenum.append(k)
+            linenum.append(k)#get the substitude line num
             line = ' '.join(list_line)
             #print('after process:',line)
             linechange.append(line)
     return line
 
-def filesname(name,t):
+def filesname(name,t):#new name for btorfiles 
     b = '_'+ str(t)
     str_list = list(name)
     i = name.find('btor')

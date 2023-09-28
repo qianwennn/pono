@@ -1,0 +1,24 @@
+1 sort bitvec 2
+2 ones 1
+3 sub 1 2 2 ###UF###
+4 not 1 3
+5 state 1
+6 state 1 bv0_2
+7 init 1 6 5
+8 sort bitvec 1
+9 input 8 input0_1
+10 uext 1 9 1
+11 next 1 6 10
+12 init 1 5 4
+13 not 1 10
+14 next 1 5 13
+15 sort bitvec 8
+16 add 1 6 5
+17 sext 15 16 6
+18 sort bitvec 5
+19 zero 18
+20 sext 15 19 3
+21 srl 15 17 20
+22 redor 8 21
+23 not 8 22
+24 bad 23

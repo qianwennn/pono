@@ -1,0 +1,29 @@
+1 sort bitvec 1
+2 one 1
+3 sort bitvec 7
+4 zero 3
+5 redand 1 4
+6 urem 1 2 5
+7 state 1 bv1_1
+8 implies 1 7 7
+9 srem 1 7 8
+10 not 1 9
+11 state 1 bv0_1
+12 init 1 11 10
+13 neq 1 7 7
+14 sort bitvec 4
+15 sort bitvec 2
+16 uext 15 7 1
+17 ones 15
+18 mul 15 17 17
+19 or 15 16 18
+20 uext 14 19 2
+21 ulte 1 20 20
+22 sub 1 13 21 ###UF###
+23 next 1 11 22
+24 init 1 7 6
+25 input 1 input0_1
+26 next 1 7 25
+27 sll 1 25 11
+28 sll 1 27 27
+29 bad 28

@@ -1,0 +1,1360 @@
+counter_1.btor2
+
+is_covered: 1
+sat
+counter_0.btor2
+
+is_covered: 1
+sat
+counter.btor2
+
+is_covered: 0
+unknown
+sw_state_machine_52.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_30.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_6.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_54.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_23.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_32.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_73.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_31.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_97.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_25.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_58.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_63.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_43.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_39.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_53.btor2
+
+is_covered: 1
+unknown
+sw_state_machine.btor2
+
+is_covered: 0
+unknown
+sw_state_machine_88.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_49.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_38.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_60.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_84.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_75.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_93.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_15.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_99.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_7.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_22.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_81.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_79.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_12.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_46.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_51.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_37.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_19.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_80.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_101.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_44.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_14.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_92.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_95.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_47.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_21.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_70.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_13.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_89.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_10.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_66.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_1.btor2
+
+is_covered: 1
+sat
+sw_state_machine_48.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_85.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_86.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_56.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_68.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_42.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_16.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_34.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_33.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_100.btor2
+
+is_covered: 1
+sat
+sw_state_machine_28.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_77.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_3.btor2
+
+is_covered: 1
+sat
+sw_state_machine_11.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_67.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_0.btor2
+
+is_covered: 1
+sat
+sw_state_machine_8.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_76.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_17.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_82.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_71.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_72.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_55.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_62.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_24.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_98.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_94.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_36.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_57.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_2.btor2
+
+is_covered: 1
+sat
+sw_state_machine_20.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_40.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_90.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_27.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_78.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_41.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_64.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_91.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_4.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_18.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_96.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_26.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_45.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_87.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_74.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_65.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_83.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_29.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_5.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_35.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_9.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_61.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_69.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_50.btor2
+
+is_covered: 1
+unknown
+sw_state_machine_59.btor2
+
+is_covered: 1
+unknown
+eq_sdp_v6_0.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_4.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6.btor2
+
+is_covered: 0
+unknown
+eq_sdp_v6_3.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_6.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_5.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_7.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_2.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_8.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_9.btor2
+
+is_covered: 1
+sat
+eq_sdp_v6_1.btor2
+
+is_covered: 1
+sat
+sw_loop_59.btor2
+
+is_covered: 1
+sat
+sw_loop_18.btor2
+
+is_covered: 1
+unknown
+sw_loop_52.btor2
+
+is_covered: 1
+unknown
+sw_loop_41.btor2
+
+is_covered: 1
+unknown
+sw_loop_46.btor2
+
+is_covered: 1
+unknown
+sw_loop_0.btor2
+
+is_covered: 1
+sat
+sw_loop_43.btor2
+
+is_covered: 1
+unknown
+sw_loop_27.btor2
+
+is_covered: 1
+unknown
+sw_loop_56.btor2
+
+is_covered: 1
+unknown
+sw_loop_5.btor2
+
+is_covered: 1
+unknown
+sw_loop_28.btor2
+
+is_covered: 1
+unknown
+sw_loop_22.btor2
+
+is_covered: 1
+unknown
+sw_loop_25.btor2
+
+is_covered: 1
+unknown
+sw_loop_32.btor2
+
+is_covered: 1
+unknown
+sw_loop_4.btor2
+
+is_covered: 1
+sat
+sw_loop_40.btor2
+
+is_covered: 1
+unknown
+sw_loop_14.btor2
+
+is_covered: 1
+unknown
+sw_loop_16.btor2
+
+is_covered: 1
+unknown
+sw_loop_58.btor2
+
+is_covered: 1
+unknown
+sw_loop_34.btor2
+
+is_covered: 1
+unknown
+sw_loop_19.btor2
+
+is_covered: 1
+unknown
+sw_loop_50.btor2
+
+is_covered: 1
+unknown
+sw_loop_8.btor2
+
+is_covered: 1
+unknown
+sw_loop_55.btor2
+
+is_covered: 1
+unknown
+sw_loop_42.btor2
+
+is_covered: 1
+unknown
+sw_loop_13.btor2
+
+is_covered: 1
+unknown
+sw_loop_11.btor2
+
+is_covered: 1
+unknown
+sw_loop.btor2
+
+is_covered: 0
+unknown
+sw_loop_47.btor2
+
+is_covered: 1
+unknown
+sw_loop_51.btor2
+
+is_covered: 1
+unknown
+sw_loop_15.btor2
+
+is_covered: 1
+unknown
+sw_loop_6.btor2
+
+is_covered: 1
+unknown
+sw_loop_23.btor2
+
+is_covered: 1
+unknown
+sw_loop_7.btor2
+
+is_covered: 1
+unknown
+sw_loop_12.btor2
+
+is_covered: 1
+unknown
+sw_loop_37.btor2
+
+is_covered: 1
+unknown
+sw_loop_36.btor2
+
+is_covered: 1
+unknown
+sw_loop_53.btor2
+
+is_covered: 1
+unknown
+sw_loop_38.btor2
+
+is_covered: 1
+unknown
+sw_loop_26.btor2
+
+is_covered: 1
+unknown
+sw_loop_9.btor2
+
+is_covered: 1
+unknown
+sw_loop_10.btor2
+
+is_covered: 1
+unknown
+sw_loop_48.btor2
+
+is_covered: 1
+unknown
+sw_loop_57.btor2
+
+is_covered: 1
+unknown
+sw_loop_49.btor2
+
+is_covered: 1
+unknown
+sw_loop_35.btor2
+
+is_covered: 1
+unknown
+sw_loop_54.btor2
+
+is_covered: 1
+unknown
+sw_loop_29.btor2
+
+is_covered: 1
+unknown
+sw_loop_20.btor2
+
+is_covered: 1
+unknown
+sw_loop_39.btor2
+
+is_covered: 1
+unknown
+sw_loop_33.btor2
+
+is_covered: 1
+unknown
+sw_loop_21.btor2
+
+is_covered: 1
+unknown
+sw_loop_30.btor2
+
+is_covered: 1
+unknown
+sw_loop_24.btor2
+
+is_covered: 1
+unknown
+sw_loop_31.btor2
+
+is_covered: 1
+unknown
+sw_loop_3.btor2
+
+is_covered: 1
+sat
+sw_loop_1.btor2
+
+is_covered: 1
+sat
+sw_loop_2.btor2
+
+is_covered: 1
+sat
+sw_loop_45.btor2
+
+is_covered: 1
+unknown
+sw_loop_44.btor2
+
+is_covered: 1
+unknown
+sw_loop_17.btor2
+
+is_covered: 1
+unknown
+paper_v3_4.btor2
+
+is_covered: 1
+sat
+paper_v3_0.btor2
+
+is_covered: 1
+sat
+paper_v3.btor2
+
+is_covered: 0
+unknown
+paper_v3_2.btor2
+
+is_covered: 1
+sat
+paper_v3_1.btor2
+
+is_covered: 1
+unknown
+paper_v3_3.btor2
+
+is_covered: 1
+sat
+cav14_example_4.btor2
+
+is_covered: 1
+sat
+cav14_example.btor2
+
+is_covered: 0
+unknown
+cav14_example_3.btor2
+
+is_covered: 1
+sat
+cav14_example_0.btor2
+
+is_covered: 1
+sat
+cav14_example_2.btor2
+
+is_covered: 1
+sat
+cav14_example_1.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_1.btor2
+
+is_covered: 1
+sat
+sw_sym_ex_63.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_18.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_38.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_22.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_44.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_14.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_73.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_50.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_55.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_19.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_65.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_13.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_54.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex.btor2
+
+is_covered: 0
+unknown
+sw_sym_ex_17.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_27.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_5.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_7.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_34.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_24.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_20.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_66.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_3.btor2
+
+is_covered: 1
+sat
+sw_sym_ex_58.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_56.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_11.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_59.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_6.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_43.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_21.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_48.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_72.btor2
+sw_sym_ex_2.btor2
+
+is_covered: 1
+sat
+sw_sym_ex_52.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_42.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_69.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_26.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_16.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_40.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_47.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_68.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_51.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_62.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_41.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_8.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_9.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_60.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_37.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_71.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_10.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_46.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_45.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_15.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_31.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_36.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_30.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_61.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_28.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_49.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_23.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_35.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_53.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_0.btor2
+
+is_covered: 1
+sat
+sw_sym_ex_4.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_57.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_32.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_12.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_33.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_64.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_25.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_67.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_29.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_70.btor2
+
+is_covered: 1
+unknown
+sw_sym_ex_39.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_34.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_31.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_33.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_4.btor2
+
+is_covered: 1
+sat
+sw_ball2004_1_2.btor2
+
+is_covered: 1
+sat
+sw_ball2004_1_14.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_12.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_5.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_21.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_29.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_26.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_27.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_18.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_9.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_8.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_11.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_19.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_17.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_3.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_15.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1.btor2
+
+is_covered: 0
+unknown
+sw_ball2004_1_6.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_7.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_24.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_16.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_20.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_13.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_30.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_1.btor2
+
+is_covered: 1
+sat
+sw_ball2004_1_32.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_0.btor2
+
+is_covered: 1
+sat
+sw_ball2004_1_28.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_25.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_23.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_10.btor2
+
+is_covered: 1
+unknown
+sw_ball2004_1_22.btor2
+
+is_covered: 1
+unknown
+eq_sdp_v4_9.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_3.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_0.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4.btor2
+
+is_covered: 0
+unknown
+eq_sdp_v4_6.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_2.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_4.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_5.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_7.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_8.btor2
+
+is_covered: 1
+sat
+eq_sdp_v4_1.btor2
+
+is_covered: 1
+sat
+client_server_22.btor2
+
+is_covered: 1
+sat
+client_server_9.btor2
+
+is_covered: 1
+sat
+client_server_20.btor2
+
+is_covered: 1
+sat
+client_server_0.btor2
+
+is_covered: 1
+sat
+client_server_13.btor2
+
+is_covered: 1
+sat
+client_server_14.btor2
+
+is_covered: 1
+sat
+client_server_6.btor2
+
+is_covered: 1
+sat
+client_server_17.btor2
+
+is_covered: 1
+sat
+client_server_26.btor2
+
+is_covered: 1
+sat
+client_server_11.btor2
+
+is_covered: 1
+sat
+client_server_16.btor2
+
+is_covered: 1
+sat
+client_server_19.btor2
+
+is_covered: 1
+sat
+client_server_7.btor2
+
+is_covered: 1
+sat
+client_server_10.btor2
+
+is_covered: 1
+sat
+client_server_25.btor2
+
+is_covered: 1
+sat
+client_server_1.btor2
+
+is_covered: 1
+sat
+client_server_2.btor2
+
+is_covered: 1
+sat
+client_server_24.btor2
+
+is_covered: 1
+sat
+client_server_27.btor2
+
+is_covered: 1
+sat
+client_server_8.btor2
+
+is_covered: 1
+sat
+client_server_4.btor2
+
+is_covered: 1
+sat
+client_server.btor2
+client_server_23.btor2
+
+is_covered: 1
+sat
+client_server_21.btor2
+
+is_covered: 1
+sat
+client_server_5.btor2
+
+is_covered: 1
+sat
+client_server_18.btor2
+
+is_covered: 1
+sat
+client_server_3.btor2
+
+is_covered: 1
+sat
+client_server_15.btor2
+
+is_covered: 1
+sat
+client_server_12.btor2
+
+is_covered: 1
+sat
+the timeout is:1
+
