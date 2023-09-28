@@ -298,7 +298,18 @@ int main(int argc, char ** argv)
             + pono_options.filename_ + " (" + to_string(num_props) + ")");
       }
 
-      Term prop = propvec[pono_options.prop_idx_];
+    //add make_term ,add and , prop_idx_ is in default
+    // cout << "this is prop:" + to_string(pono_options.prop_idx_) << endl;    
+    //std::cout << "The size is " << propvec.size() << std::endl;
+      Term prop;
+      if ( propvec.size() >= 2){
+        prop = s->make_term(And, propvec);
+      }
+      else if (propvec.size() == 1){
+        prop = propvec[pono_options.prop_idx_];
+      }
+
+      //Term prop = propvec[pono_options.prop_idx_];
 
       vector<UnorderedTermMap> cex;
       res = check_prop(pono_options, prop, fts, s, cex);
