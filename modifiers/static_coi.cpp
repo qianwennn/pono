@@ -101,6 +101,8 @@ bool UninterpretedFuncCOICover(const TransitionSystem & ts, const Property & pro
         smt::UnorderedTermSet new_reg_to_visit;
         for (const auto & reg : reg_set) {
             auto pos = ts.state_updates().find(reg);
+            if (pos == ts.state_updates().end())
+                 continue;
             auto next_func = pos->second;
             if(AstHasUF(next_func, ts.solver()))
                 return true;
